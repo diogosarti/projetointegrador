@@ -1,0 +1,46 @@
+<header class="bg-green-900 text-white flex text-center justify-center">
+  <nav class="flex flex-row justify-between mx-4 container h-20 items-center lg:max-w-5xl">
+    <div>
+      <h1 class="text-2xl"><a href="/" class="flex items-center gap-2"><box-icon color="white" name='world'></box-icon> ONG For All</a></h1>
+    </div>
+    <div class="hidden md:flex flex-row gap-2 align-center" id="desktopMenu">
+      <ul class="flex flex-row gap-x-8">
+        <li><a href="/">Início</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Preços</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </div>
+    <div id="menubutton" class="relative w-8 h-8 cursor-pointer md:hidden transition-all">
+      <box-icon class="absolute inset-0 m-auto" color="white" name='menu' size="md"></box-icon>
+      <box-icon class="absolute inset-0 m-auto hidden" color="white" name='x' size="md"></box-icon>
+    </div>
+  </nav>
+  <div class="hidden md:hidden" id="mobileMenu">
+    <ul class="bg-green-900 text-xl text-white absolute top-16 pt-4 w-full left-0 mt-2 min-h-96 flex flex-col rounded-bl-full gap-y-10">
+      <li><a href="/" class="block">Início</a></li>
+      <li><a href="#" class="block">Sobre</a></li>
+      <li><a href="#" class="block">Preços</a></li>
+      <li><a href="#" class="block">Contato</a></li>
+    </ul>
+  </div>
+</header>
+
+<script>
+  const menubtn = document.getElementById('menubutton');
+  const hamburguerIcon = document.getElementById('menubutton').querySelector('box-icon[name="menu"]');
+  const closeIcon = document.getElementById('menubutton').querySelector('box-icon[name="x"]');
+  const desktopMenu = document.getElementById('desktopMenu');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  menubtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    hamburguerIcon.classList.toggle('hidden');
+    closeIcon.classList.toggle('hidden');
+    /*if (!mobileMenu.classList.contains('hidden')) {
+      document.body.style.overflow = 'hidden'; // Evita a rolagem do corpo quando o menu móvel está aberto
+    } else {
+      document.body.style.overflow = ''; // Restaura a rolagem do corpo quando o menu móvel está fechado
+    }*/
+  });
+</script>
