@@ -1,7 +1,7 @@
 import { FastifyRequest, FastifyReply } from 'fastify'
 
 interface Data {
-  title: string
+  stitle: string
 }
 
 export async function renderHomePage(
@@ -9,8 +9,8 @@ export async function renderHomePage(
   reply: FastifyReply,
 ): Promise<void> {
   const data: Data = {
-    title: 'Início',
+    stitle: 'Início',
   }
 
-  return reply.view('/src/views/templates/index.hbs', data)
+  return reply.view('/templates/index.hbs', data)
 }
