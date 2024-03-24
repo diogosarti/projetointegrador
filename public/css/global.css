@@ -21,3 +21,8 @@ body::-webkit-scrollbar-thumb {
   border-radius: 20px; /* roundness of the scroll thumb */ 
   border: 1px solid #e5e5e5;
 }
+
+.about-section-bg{
+  background: url('/public/img/cccircular.svg') fixed center center/cover;
+  background-color: #2D4BA6;
+}
