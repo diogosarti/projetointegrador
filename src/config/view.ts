@@ -5,10 +5,10 @@ import path from 'path'
 
 export default async function (fastify: FastifyInstance) {
   const viewsPath = path.join(__dirname, '..', 'views')
-  const layoutsPath = path.join(__dirname, '..', 'views/layouts/main.hbs')
+  /* const layoutsPath = path.join(__dirname, '..', 'views/layouts/main.hbs')
 
   console.log(`Views path: ${viewsPath}`)
-  console.log(`Layouts path: ${layoutsPath}`)
+  console.log(`Layouts path: ${layoutsPath}`) */
   fastify.register(pointOfView, {
     engine: {
       handlebars,

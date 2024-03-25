@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   font-family: "Poppins", sans-serif;
 }
@@ -25,4 +29,49 @@ body::-webkit-scrollbar-thumb {
 .about-section-bg{
   background: url('/public/img/cccircular.svg') fixed center center/cover;
   background-color: #2D4BA6;
+}
+
+.parallax1 > use {
+  animation: move-forever1 12s linear infinite;
+}
+.parallax2 > use {
+  animation: move-forever2 10s linear infinite;
+}
+.parallax3 > use {
+  animation: move-forever3 8s linear infinite;
+}
+.parallax4 > use {
+  animation: move-forever4 6s linear infinite;
+}
+@keyframes move-forever1 {
+  0% {
+    transform: translate(85px, 0%);
+  }
+  100% {
+    transform: translate(-90px, 0%);
+  }
+}
+@keyframes move-forever2 {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+  100% {
+    transform: translate(85px, 0%);
+  }
+}
+@keyframes move-forever3 {
+  0% {
+    transform: translate(85px, 0%);
+  }
+  100% {
+    transform: translate(-90px, 0%);
+  }
+}
+@keyframes move-forever4 {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+  100% {
+    transform: translate(85px, 0%);
+  }
 }
