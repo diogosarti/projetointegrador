@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm run build-css -- --watch & tsx watch src/app.ts",
-    "build": "npm run build-css && tsc && echo 'Build completed!'",
+    "build": "npm run build-css && npm run build-views && tsc && echo 'Build completed!'",
     "start": "node dist/app.js",
     "build-css": "postcss ./public/css/global.css -o ./public/dist/global.css",
+    "build-views": "cpy 'src/views/**/*' dist/views",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -23,6 +24,7 @@
     "@rocketseat/eslint-config": "^2.2.2",
     "@types/node": "^20.11.30",
     "autoprefixer": "^10.4.19",
+    "cpy-cli": "^5.0.0",
     "eslint": "^8.57.0",
     "postcss": "^8.4.38",
     "postcss-cli": "^11.0.0",
