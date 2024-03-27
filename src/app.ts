@@ -1,8 +1,9 @@
 import fastify from 'fastify'
 import initViewEngine from './config/view'
-import homeRoutes from './routes/homeRoutes'
 import fastifyStatic from '@fastify/static'
 import path from 'path'
+import 'dotenv/config'
+import { registerAllRoutes } from './routes/allRoutes'
 
 const server = fastify()
 
@@ -12,12 +13,14 @@ server.register(fastifyStatic, {
 })
 
 initViewEngine(server)
-homeRoutes(server)
+registerAllRoutes(server)
 
-server.listen({ port: 3000 }, (err, address) => {
+server.listen({ port: Number(process.env.NODE_APP_PORT) }, (err) => {
   if (err) {
     console.error(err)
     process.exit(1)
   }
-  console.log(`Server listening at ${address}`)
+  console.log(
+    `Servidor rodando em: http://${process.env.NODE_APP_HOST}:${process.env.NODE_APP_PORT}`,
+  )
 })

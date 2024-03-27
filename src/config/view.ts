@@ -15,7 +15,7 @@ export default async function (fastify: FastifyInstance) {
     },
     viewExt: 'hbs',
     root: viewsPath,
-    layout: 'layouts/main',
+    /* layout: 'layouts/main', */
     options: {
       partials: {
         homenavbar: 'partials/homenavbar.hbs',

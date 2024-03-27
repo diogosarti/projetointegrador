@@ -12,5 +12,5 @@ export async function renderHomePage(
     stitle: 'Início',
   }
 
-  return reply.view('/templates/index.hbs', data)
+  return reply.view('/templates/index.hbs', data, { layout: 'layouts/main' })
 }

@@ -57,6 +57,11 @@ npm run dev
 ```
 Pronto, seu servidor ficará disponível em [`http://localhost:3000`](http://localhost:3000)
 
+# [Esturua de pastas](/docs/estrutura/esturuaDePastas.md)
+
+As pastas estão estruturadas seguindo o padrão MVC:
+
+
 
 # Em construção ⚙️
 >Esta é apenas uma prévia da documentação. Em breve uma mais detalhada estará disponível.
